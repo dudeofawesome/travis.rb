@@ -84,6 +84,12 @@ module Travis
         entity.reload
       end
 
+      def restartDebug(entity)
+        raise Error, "cannot debug a #{entity.class.one}" unless entity.cancelable?
+        session.post_raw("/job/#{entity.job_ids.last}/debug")
+        entity.reload
+      end
+
       def listen(*entities, &block)
         listener = Listener.new(session)
         listener.subscribe(*entities, &block)
