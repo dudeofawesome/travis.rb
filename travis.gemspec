@@ -188,6 +188,7 @@ Gem::Specification.new do |s|
     "lib/travis/cli/cancel.rb",
     "lib/travis/cli/command.rb",
     "lib/travis/cli/console.rb",
+    "lib/travis/cli/debug.rb",
     "lib/travis/cli/disable.rb",
     "lib/travis/cli/enable.rb",
     "lib/travis/cli/encrypt.rb",
