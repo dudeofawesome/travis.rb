@@ -180,6 +180,10 @@ module Travis
         false
       end
 
+      def debuggable?
+        false
+      end
+
       private
 
         def relation(name)
